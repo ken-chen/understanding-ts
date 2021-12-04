@@ -1,21 +1,14 @@
-function add(n1: number,n2: number, showResult: boolean, phrase: string){
-    
-    const result =n1 + n2;
-    if(showResult){
+// const person: {
+//     name: string;
+//     age: number;
+// } = {
+//     name: 'Ken Chen',
+//     age: 38
+// };
 
-        console.log(phrase + result)
-    }else{
-        return n1 +n2;
-    }
-   
-}
+const person = {
+    name: 'Ken Chen',
+    age: 38
+};
 
-let number1: number;
- number1 = 5;
-const numcer2 = 2.8;
-const printResult = true;
-let resultPhrae = 'Result is: ';
-// resultPhrae = 0;
-
-const result = add(number1,numcer2,printResult,resultPhrae);
-console.log(result)
+console.log(person.name);
