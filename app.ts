@@ -10,10 +10,12 @@ function add(n1: number,n2: number, showResult: boolean, phrase: string){
    
 }
 
-const number1 = 5;
+let number1: number;
+ number1 = 5;
 const numcer2 = 2.8;
 const printResult = true;
-const resultPhrae = 'Result is: ';
+let resultPhrae = 'Result is: ';
+// resultPhrae = 0;
 
 const result = add(number1,numcer2,printResult,resultPhrae);
 console.log(result)
