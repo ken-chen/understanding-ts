@@ -9,3 +9,15 @@ if (typeof userInput === 'string'){
 }
 
 //unknown is better than any
+
+function generateError (message: string, code:number):never{
+    throw {message: message, errorCode: code};
+    // while(true){
+
+    // }
+}
+
+generateError('An error occurred!' , 500);
+console.log(generateError('An error occurred!' , 500))
+
+// never never return anything
