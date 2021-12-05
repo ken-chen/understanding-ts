@@ -5,3 +5,5 @@ console.log(userNam2)
 //tsc app.ts --watch
 
 //tsc --init
+//tsc
+//tsc -w
