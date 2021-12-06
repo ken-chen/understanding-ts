@@ -33,7 +33,7 @@ activeHobbies.push(...hobbies);
 const activeHobbies2 = ['Hiking', ...hobbies]
 
 const person2 = {
-    name: 'Ken',
+    firstName: 'Ken',
     age: 38
 }; 
 
@@ -62,3 +62,19 @@ const add7 = (...numbers : number[]) => {
 
 const addNumbers = add6(5,10, 2 ,3.7);
 console.log(addNumbers)
+
+
+// const hobby1 = hobbies[0];
+// const hobby2 = hobbies[1];
+
+//Array Destructing
+const[hobby1, hobby2, ...remainingHobbies] = hobbies;
+
+//do not change hobbies, just copied value
+console.log( hobbies, hobby1, hobby2);
+
+
+//object destructing, alias rename firstName, copy value out of the object
+const {firstName: userName2, age} = person2;
+
+console.log(userName2, age);
