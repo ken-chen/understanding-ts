@@ -1,13 +1,21 @@
 class Department {
 
+    static fiscalYear =2020;
     // private readonly id :string;
     // private name: string ;
     protected employees: string[]=[];
 
     constructor(private readonly id: string, public name: string){
         // this.name = n;
+
+        //can not access the static properties in constructor
+        // console.log(this.fiscalYear)
+        console.log(Department.fiscalYear)
     }
 
+    static createEmployee(name:string){
+        return {name: name};
+    }
     //private can apply to method
 
     //type safety
@@ -112,3 +120,9 @@ console.log(it)
 // const accountingCopy = {name: 'DUMMY',describe: accounting.describe}
 // accountingCopy.describe();
 
+//static method and property
+// Math.PI
+
+//statuc class direct call without the new keyword
+const employee1 = Department.createEmployee('Ken');
+console.log(employee1, Department.fiscalYear)
