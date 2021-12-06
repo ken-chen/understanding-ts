@@ -2,7 +2,7 @@ class Department {
 
     // private readonly id :string;
     // private name: string ;
-    private employees: string[]=[];
+    protected employees: string[]=[];
 
     constructor(private readonly id: string, public name: string){
         // this.name = n;
@@ -20,6 +20,7 @@ class Department {
         //validation here
         //id is the readonly
         // this.id = "2";
+        //change employees from private to protected 
         this.employees.push(employee);
     }
 
@@ -49,6 +50,15 @@ class AccountingDepartment extends Department{
     }
     printReport(){
         console.log(this.reports);
+    }
+
+    //override method
+    addEmployee(name:string){
+        if(name === 'Ken'){
+            return;
+        }
+
+        this.employees.push(name);
     }
 
 }
