@@ -42,3 +42,23 @@ const copiedPointPerson = person2;
 
 //copy the object
 const copiedPerson2= { ...person2};
+
+//REST parameters ,tuple
+const add6 = (...numbers : [number, number, number, number]) => {
+    let result =0;
+    return numbers.reduce((curResult, curValue)=>{
+        return curResult + curValue;
+    },0);
+}
+
+// REST number Array
+const add7 = (...numbers : number[]) => {
+    let result =0;
+    return numbers.reduce((curResult, curValue)=>{
+        return curResult + curValue;
+    },0);
+}
+
+
+const addNumbers = add6(5,10, 2 ,3.7);
+console.log(addNumbers)
