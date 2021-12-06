@@ -1,41 +1,20 @@
-const userNam2 = 'Ken2';
+const userName2 = 'Ken';
+// userName2 = 'a';
 
-console.log(userNam2)
-//tsc app.ts -w
-//tsc app.ts --watch
+let age =30;
+age =29;
 
-//tsc --init
-//tsc
-//tsc -w
+console.log(29);
+var result;
+function add(a:number,b:number){
+     result = a +b;
+    return result;
 
-let logged;
-
-function sendAnalytics (data:string){
-    console.log(data);
-    logged = true;
-    logged = 'Ken';
-    console.log(logged)
 }
 
-sendAnalytics("The data")
+{
+    let a= 100;
 
-const button = document.querySelector('button')!;
-
-function clickHandler(message: string){
-    console.log("Clicked!" + message)
 }
-
-if (button){
-    button.addEventListener('click', clickHandler.bind(null, "Your are welcome"));
-}
-
-
-function add3(n1:number, n2:number){
-    
-    if(n1+n2>0){
-        return n1+n2;
-    }
-
-    return;
-    
-}
+add(1,2);
+console.log(result);
