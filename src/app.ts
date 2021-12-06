@@ -20,3 +20,25 @@ if(button2){
 }
 
 printOutput(add5(5))
+
+const hobbies = ['Sports','Cooking']
+console.log(hobbies[0])
+const activeHobbies = ['Hiking']
+
+activeHobbies.push(hobbies[0],hobbies[1]);
+//equals to below
+activeHobbies.push(...hobbies);
+
+//spread operator, useful for pulling elements for the array
+const activeHobbies2 = ['Hiking', ...hobbies]
+
+const person2 = {
+    name: 'Ken',
+    age: 38
+}; 
+
+//copy the reference
+const copiedPointPerson = person2;
+
+//copy the object
+const copiedPerson2= { ...person2};
