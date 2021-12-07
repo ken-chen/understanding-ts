@@ -22,3 +22,12 @@ type Combinable2 = string | number;
 type Numeric = number | boolean;
 
 type Universal = Combinable2 & Numeric;
+
+
+function add8(a: Combinable2, b:Combinable2){
+    //type guard
+    if(typeof a === 'string' || typeof b === 'string'){
+        return a.toString() + b.toString();
+    }
+    return a + b;
+}
