@@ -1,14 +1,15 @@
-type Admin = {
+interface Admin  {
     name: string;
     privileges: string[];
 };
 
-type Employee = {
+interface Employee  {
     name: string;
     startDate: Date;
 };
 
-type ElevatedEmployee = Admin & Employee;
+//object type, combination of the object properties
+interface ElevatedEmployee extends Employee, Admin{}
 
 const e1: ElevatedEmployee = {
     name: 'Max',
@@ -16,3 +17,8 @@ const e1: ElevatedEmployee = {
     startDate: new Date()
 };
 
+//union type, type stay in common
+type Combinable2 = string | number;
+type Numeric = number | boolean;
+
+type Universal = Combinable2 & Numeric;
