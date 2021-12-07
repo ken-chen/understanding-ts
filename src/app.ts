@@ -31,3 +31,25 @@ function add8(a: Combinable2, b:Combinable2){
     }
     return a + b;
 }
+
+type UnknownEmployee = Employee | Admin;
+
+function printEmployeeInformation(emp: UnknownEmployee){
+    console.log('Name: ' + emp.name);
+
+    //this check runs at the runtime by javascript
+    // if(typeof emp === 'object'){}
+
+    if('privileges' in emp){
+        console.log('Privileges: ' + emp.privileges);
+    }
+
+    if('startDate' in emp){
+        console.log("Start Date: " + emp.startDate)
+    }
+
+  
+}
+
+printEmployeeInformation(e1);
+printEmployeeInformation({name: 'Manu', startDate: new Date()});
