@@ -143,3 +143,18 @@ if(userInputElement3){
 
 
 userInputElement.value = 'Hi there!';
+
+interface ErrorContainr{ 
+    //{eamil:'Not a valid email', userName:'Must start with a character!'}
+    //index type
+    // id: string;
+    [prop: string]:string;
+    // id2: number;
+}
+
+//what prop is and how many prop we want to use
+const errorBag: ErrorContainr = {
+    email: 'Not a valid email!',
+    username: 'Must start with a capital character!'
+}
+
