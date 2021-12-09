@@ -45,7 +45,7 @@ const copiedPerson2= { ...person2};
 
 //REST parameters ,tuple
 const add6 = (...numbers : [number, number, number, number]) => {
-    let result =0;
+    
     return numbers.reduce((curResult, curValue)=>{
         return curResult + curValue;
     },0);
@@ -53,7 +53,7 @@ const add6 = (...numbers : [number, number, number, number]) => {
 
 // REST number Array
 const add7 = (...numbers : number[]) => {
-    let result =0;
+
     return numbers.reduce((curResult, curValue)=>{
         return curResult + curValue;
     },0);
