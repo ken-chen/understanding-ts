@@ -124,3 +124,21 @@ function moveAnimal(animal: Animal){
 }
 
 moveAnimal({type:"bird", flyingSpeed: 10});
+
+const paragraph = document.querySelector('p');
+const paragraph2 = document.getElementById('message-output');
+
+//!not null
+//as type casting
+//<> used in react , can conflict
+const userInputElement = <HTMLInputElement>document.getElementById('user-input')!;
+
+const userInputElement2 = document.getElementById('user-input')! as HTMLInputElement;
+
+const userInputElement3 = document.getElementById('user-input');
+
+if(userInputElement3){
+    (userInputElement3 as HTMLInputElement).value = "Hihi";
+}
+
+userInputElement.value = 'Hi there!';
